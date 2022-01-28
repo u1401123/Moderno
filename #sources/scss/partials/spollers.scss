@@ -1,0 +1,105 @@
+// переменные
+//==============================================================================
+$bgtxcolor         : #69a2b7;
+$bdtxcolor         : #69a2b7;
+$bgspactive        : #fbe7b5;
+$bgspnoneactive    : #fbceb5;
+$bdtitlecolor      : #69a2b7;
+$bdleftcolor       : #ff0000;
+$itemtxcolor       : #fff;
+$titlewidth        : 80%;
+$titleheight       : 50px;
+$arrowbgcolor      : #000;
+$arrowactivebgcolor: #ff0000;
+
+//==============================================================================
+.block {
+  padding         : 50px 0px 50px 0px;
+  background-color: #292D3E;
+}
+
+.spollers {
+  &__item {
+    margin: 20px 0px 20px 0px;
+  }
+
+  &__title {
+    font-size       : 1.6rem;
+    display         : flex;
+    flex            : 1 1 auto;
+    align-items     : center;
+    margin          : 0px auto;
+    cursor          : pointer;
+    text-transform  : uppercase;
+    letter-spacing  : 2px;
+    position        : relative;
+    padding         : 0px 0px 0px 30px;
+    width           : $titlewidth;
+    height          : $titleheight;
+    border          : 2px solid $bdtitlecolor;
+    border-radius   : 0px 10px 10px 0px;
+    transition      : all 0.3s ease 0s;
+    background-color: $bgspnoneactive;
+
+    &::after,
+    &::before {
+      content         : "";
+      width           : 10px;
+      height          : 1px;
+      position        : absolute;
+      background-color: $arrowbgcolor;
+      transition      : all 0.6s ease 0s;
+      top             : 22px;
+      margin          : 0px 0px 0px 5px;
+    }
+
+    &::before {
+      transform: rotate(40deg);
+      left     : 0;
+    }
+
+    &::after {
+      transform: rotate(-40deg);
+      left     : 7px;
+    }
+
+    &.active::after,
+    &.active::before {
+      background-color: $arrowactivebgcolor;
+    }
+
+    &.active::before {
+      transform: rotate(-40deg);
+      left     : 0;
+    }
+
+    &.active::after {
+      transform: rotate(40deg);
+      left     : 7px;
+    }
+
+    &.active {
+      border-radius   : 0px 10px 0px 0px;
+      transition      : all 0.1s ease 0s;
+      border-left     : 4px solid $bdleftcolor;
+      border-bottom   : none;
+      background-color: $bgspactive;
+    }
+  }
+
+  &__text {
+    font-size       : 1.6rem;
+    margin          : 0px auto;
+    display         : none;
+    padding         : 10px 0px 0px 0px;
+    width           : $titlewidth;
+    height          : 300px;
+    background-color: $bgtxcolor;
+    padding         : 10px;
+    border          : 2px solid $bdtxcolor;
+    border-top      : none;
+    border-left     : 4px solid $bdleftcolor;
+    border-radius   : 0px 0px 10px 0px;
+    color           : $itemtxcolor;
+  }
+}

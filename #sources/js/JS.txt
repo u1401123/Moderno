@@ -1,0 +1,25 @@
+//@prepros-append jq-start.js
+//@prepros-append jq-functions.js
+//@prepros-append partials/tabs.js
+//@prepros-append partials/sliders.js
+//@prepros-append partials/spollers.js
+//@prepros-append jq-end.js
+//@prepros-append js-functions.js
+//@prepros-append partials/preloader.js
+//@prepros-append partials/jq-menu_lending.js
+//@prepros-append partials/js-menu_light.js
+
+
+
+
+
+
+//@prepros-append libs/aos.js
+//@prepros-append libs/jquery.ui.totop.js
+//@prepros-append libs/easing.js
+//@prepros-append libs/slick.min.js
+
+
+<script src="https://maps.google.com/maps/api/js?sensor=false&amp;key="></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=&lang=ru_RU" type="text/javascript"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>

@@ -1,0 +1,74 @@
+//==================================================================================
+$(function () {
+  // Owl Carousel
+  var owl = $(".owl-carousel");
+  owl.owlCarousel({
+    items: 3, // Количество отображаемых за раз слайдов по-умолчанию 3
+    nav: true, // Выводит кнопки вперед\назад.
+    pagination: true, // для пагинации
+    loop: true,//Бесконечный цикл слайдов.
+    margin: 5,//Отступ справа от элемента в пикселях
+    center: false,//Отцентровать элемент.
+    mouseDrag: true,//Включение перетягивания слайдов мышью.
+    touchDrag: true,//Включение перетягивания слайдов на тач-скрине.
+    pullDrag: true,//Возможность тянуть слайды за границы.
+    freeDrag: false,//Тоже, только к отдельному слайду.
+    stagePadding: 0,//Отступы слева и справа (чтобы видеть соседние слайды).
+    // merge: false,//Слияние элементов. Ищет data-merge='{number}’ внутрли элемента…
+    // mergeFit: true,//Выбираются объединенные элементы, если экран меньше, чем значение элемента.
+    autoWidth: false,//Автоматический подбор ширины.
+    startPosition: 0,//Стартовая позиция или URL хэш-строка ‘#id’.
+    // URLhashListener: false,//Реагировать на изменение хэша URL.
+    rewind: true,//Вернуться назад, когда граница карусели достигнута.
+    navText: ['prev', 'next'],//Текст для кнопок. Поддерживает HTML.
+    // navElement: div,//Тип элемента DOM для одной направленной навигационной ссылки.
+    // slideBy: 1,//Навигация по слайдам x.’страница’.
+    dots: true,//Показывать точки навигации.
+    dotsEach: true,//Показывать точки каждого элемента X.
+    dotData: false,//Использование data-dot содержимого.
+    lazyLoad: true,//«Ленивая» загрузка изображений.
+    autoplay: false,//Автовоспроизведение.
+    autoplayTimeout: 5000,//Задержка для автовоспроизведения.
+    autoplayHoverPause: false,//Пауза при наведении.
+    autoplaySpeed: false,//Скорость автовоспроизведения.
+    navSpeed: false,//Скорость навигации.
+    dotsSpeed: 5000,//Скорость пагинации.
+    //Объект для опций адаптивности.
+    // responsive: {
+    //   0: {
+    //     items: 1
+    //   },
+    //   768: {
+    //     items: 2
+    //   },
+    //   1180: {
+    //     items: 3
+    //   }
+    // },
+    animateOut: false,//Класс для CSS3 анимации исчезновения.
+    animateIn: false,//Класс для CSS3 анимации появления.
+    navContainer: false,//String/Class/ID/Boolean Устанавливает ваш собственный контейнер для навигации.
+    dotsContainer: false,//String/Class/ID/Boolean Устанавливает ваш собственный контейнер для пагинации.
+  });
+});
+
+
+// .owl-carousel - общий контейнер слайдера;
+// .owl-stage-outer - контейнер, содержащий слайды;
+// .owl-controls - контейнер, содержащий элементы управления слайдером;
+// .owl-nav - nav контейнер (стрелок);
+// .owl-dots - pagination контейнер или контейнер пагинации (точек).
+
+// <div class="slider owl-carousel owl-theme owl-loaded">
+//   <div class="owl-stage-outer"></div>
+//   <div class="owl-controls">
+//     <div class="owl-nav">
+//         <div class="owl-prev" style="">prev</div>
+//         <div class="owl-next" style="">next</div>
+//     </div>
+//     <div class="owl-dots" style="">
+//       <div class="owl-dot"></div>
+//       <div class="owl-dot"></div>
+//     </div>
+//   </div>
+// </div>

@@ -1,0 +1,73 @@
+.slick-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0px auto;
+  .slick-track,
+  .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  .slick-track {
+    position: relative;
+    width: 100%;
+  }
+  .slick-slide {
+    overflow: hidden;
+    float: left;
+    position: relative;
+  }
+  .slick-dots {
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px 0px 0px;
+    li {
+      margin: 0px 8px 0px 0px;
+      button {
+        font-size: 0;
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        border: 1px solid #c8c8c8;
+        background-color: transparent;
+      }
+      &.slick-active {
+        button {
+          background-color: #c8c8c8;
+        }
+      }
+    }
+  }
+  /* Стрелка */
+  .slick-arrow {
+    position: absolute;
+    top: 50%;
+    margin: -45px 0px 0px 0px;
+    z-index: 10;
+    font-size: 0; //убираем надписи на кнопках
+    width: 20px;
+    height: 60px;
+  }
+  /* Стрелка влево */
+  .slick-arrow.slick-prev {
+    background: url("../img/icon/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+    left: 0;
+  }
+  /* Стрелка вправо */
+  .slick-arrow.slick-next {
+    background: url("../img/icon/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+    right: 0;
+  }
+  /* Стрелка не активная */
+  .slick-arrow.slick-disabled {
+    opacity: 0.4;
+  }
+}

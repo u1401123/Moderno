@@ -1,0 +1,229 @@
+//переменные
+//=============================================================================
+$tabscolor1   : #eb8698;
+$tabscolor2   : #9278aa;
+$tabscolor3   : #97c67d;
+$activetxcolor: #000;
+$bdcolor      : #69a2b7;
+$tabwidth     : 33.333%;
+$bdwidth      : 2px;
+$bdradius     : 10px;
+$tabheight    : 300px;
+$tabswidth    : 80%;
+
+//=============================================================================
+@media (max-width: 479.98px) {
+  .block__navitem {
+    font-size: 12px;
+  }
+}
+
+
+.block {
+  background-color: #292D3E;
+
+  &__tabs {
+
+    width  : $tabswidth;
+    margin : 0px auto;
+    padding: 50px 0px 50px 0px;
+  }
+
+  // контейнер для вкладок
+  &__nav {
+    display: flex;
+  }
+
+  //собственно вкладки
+  &__navitem {
+    cursor      : pointer;
+    flex        : 0 1 $tabwidth;
+    height      : 30px;
+    // z-index  : 2;
+    font-size   : 16px;
+
+    &.active {
+      color: $activetxcolor;
+    }
+
+    border-top-right-radius: $bdradius;
+    border-top-left-radius : $bdradius;
+    display                : flex;
+    justify-content        : center;
+    align-items            : center;
+    text-transform         : uppercase;
+
+    &:nth-child(1) {
+      background-color: $tabscolor1;
+      border-top      : $bdwidth solid $bdcolor;
+      border-left     : $bdwidth solid $bdcolor;
+      border-right    : 1px solid $bdcolor;
+    }
+
+    &:nth-child(2) {
+      background-color: $tabscolor2;
+      border-top      : $bdwidth solid $bdcolor;
+      border-right    : 1px solid $bdcolor;
+      border-left     : 1px solid $bdcolor;
+    }
+
+    &:nth-child(3) {
+      background-color: $tabscolor3;
+      border-top      : $bdwidth solid $bdcolor;
+      border-right    : $bdwidth solid $bdcolor;
+      border-left     : 1px solid $bdcolor;
+    }
+  }
+
+  //контейнер для содержимого вкладок
+  &__items {}
+
+  //содержимое вкладок
+  &__item {
+    height     : $tabheight;
+    padding    : 10px;
+    font-size  : 18px;
+    line-height: 24px;
+    display    : none;
+    //если содержимое выходит за пределы блока
+    // overflow: auto;
+
+    &.active {
+      display: block;
+    }
+
+    &:nth-child(1) {
+      background-color: $tabscolor1;
+    }
+
+    &:nth-child(2) {
+      background-color: $tabscolor2;
+    }
+
+    &:nth-child(3) {
+      background-color: $tabscolor3;
+    }
+
+    border-bottom-right-radius: $bdradius;
+    border-bottom-left-radius : $bdradius;
+    border-left               : $bdwidth solid $bdcolor;
+    border-right              : $bdwidth solid $bdcolor;
+    border-bottom             : $bdwidth solid $bdcolor;
+    // overflow: visible;
+    // overflow: auto;
+  }
+}
+
+//==============================================================================
+//вариант с псевдо-элементами
+//==============================================================================
+// @media (max-width: 479.98px) {
+//   .block__navitem {
+//     font-size: 12px;
+//   }
+// }
+// .block {
+//   &__tabs {
+//     width: $tabswidth;
+//     margin: 0px auto;
+//     padding: 50px 0px 0px 0px;
+//   }
+//   // контейнер для вкладок
+//   &__nav {
+//     display: flex;
+//   }
+//   //собственно вкладки
+//   &__navitem {
+//     cursor: pointer;
+//     flex: 0 1 $tabwidth;
+//     height: 30px;
+//     z-index: 2;
+//     &.active {
+//       color: $activetxcolor;
+//     }
+//     border-top-right-radius: $bdradius;
+//     border-top-left-radius: $bdradius;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     text-transform: uppercase;
+
+//     &:nth-child(1) {
+//       background-color: $tabscolor1;
+//       border-top: $bdwidth solid $bdcolor;
+//       border-left: $bdwidth solid $bdcolor;
+//       border-right: 1px solid $bdcolor;
+//     }
+//     &:nth-child(2) {
+//       background-color: $tabscolor2;
+//       border-top: $bdwidth solid $bdcolor;
+//       border-right: 1px solid $bdcolor;
+//       border-left: 1px solid $bdcolor;
+//     }
+//     &:nth-child(3) {
+//       background-color: $tabscolor3;
+//       border-top: $bdwidth solid $bdcolor;
+//       border-right: $bdwidth solid $bdcolor;
+//       border-left: 1px solid $bdcolor;
+//     }
+//   }
+//   //контейнер для содержимого вкладок
+//   &__items {
+//   }
+//   //содержимое вкладок
+//   &__item {
+//     position: relative;
+//     height: $tabheight;
+//     padding: 10px;
+//     font-size: 18px;
+//     line-height: 24px;
+//     display: none;
+//     //если содержимое выходит за пределы блока
+//     // overflow: auto;
+
+//     &.active {
+//       display: block;
+//     }
+//     &:nth-child(1) {
+//       background-color: $tabscolor1;
+//     }
+//     &:nth-child(2) {
+//       background-color: $tabscolor2;
+//     }
+//     &:nth-child(3) {
+//       background-color: $tabscolor3;
+//     }
+//     border-bottom-right-radius: $bdradius;
+//     border-bottom-left-radius: $bdradius;
+//     border: $bdwidth solid $bdcolor;
+
+//     &::before {
+//       content: "";
+//       height: 30px;
+//       width: 33.2%;
+//       position: absolute;
+//       top: -30px;
+
+//       // overflow: visible;
+//       // overflow: auto;
+//     }
+//     &:nth-child(1)::before {
+//       border-top-right-radius: $bdradius;
+//       border-top-left-radius: $bdradius;
+//       background-color: $tabscolor1;
+//       left: 0;
+//     }
+//     &:nth-child(2)::before {
+//       background-color: $tabscolor2;
+//       border-top-right-radius: $bdradius;
+//       border-top-left-radius: $bdradius;
+//       left: 33.33%;
+//     }
+//     &:nth-child(3)::before {
+//       background-color: $tabscolor3;
+//       right: 0;
+//       border-top-right-radius: $bdradius;
+//       border-top-left-radius: $bdradius;
+//     }
+//   }
+// }
