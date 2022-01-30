@@ -8,6 +8,7 @@
 //@prepros-append partials/preloader.js
 //@prepros-append partials/jq-menu_lending.js
 //@prepros-append partials/js-menu_light.js
+//@prepros-append partials/ibg.js
 
 
 
