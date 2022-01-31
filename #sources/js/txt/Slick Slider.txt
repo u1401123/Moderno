@@ -1,3 +1,12 @@
+Структура HTML
+
+<div class="your-class">
+  <div>your content</div>
+  <div>your content</div>
+  <div>your content</div>
+</div>
+
+
 Имена классов:
 
 /* Слайдер */
@@ -37,55 +46,81 @@
 .slick-dots li button{}
 
 //SLIDERS
-// if ($('.slider__body').length > 0) {
-//   $('.slider__body').slick({
-//     autoplay: true,
-//     infinite: true,//зацикливание
-//     dots: true,//точки
-//     dotsClass: 'slick-dots',
-//     arrows: true,//стрелки
-//     accessibility: false,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,//сколько слайдов пролистывать за одно нажатие
-//     autoplaySpeed: 3000,
-//     adaptiveHeight: true,
-//     centerMode: true,//выстраивает слайд по центру
-//     centerPadding: '50px',
-//     cssEase: 'ease',
-//     customPaging:,
-//     asNavFor: '.slider-big__body',//связать со слайдером с указанным классом
-//     appendDots:
-//     appendArrows: $('.mainslider-arrows .container'),
-//     nextArrow: '<button type="button" class="slick-next"></button>',
-//     prevArrow: '<button type="button" class="slick-prev"></button>',
-//     draggable: true,//листать мышкой
-//     fade: false,
-//     focusOnSelect: false,
-//     easing: 'linear',//тип анимации
-//     edgeFriction: 0.15,
-//     initialSlide: 0,
-//     lazyLoad: 'ondemand',//event, slick, image, imageSource
-//     mobileFirst: false,
-//     pauseOnFocus: true,
-//     pauseOnHover: true,
-//     pauseOnDotsHover: false,
-//     respondTo: 'window',
-//     rows: 1,
-//     slide: '',
-//     slidesPerRow: 1,
-//     swipe: true,//листать на мобильном
-//     swipeToSlide: false,
-//     touchMove: true,//включает возможности тачскрина
-//     touchThreshold: 10,//какую часть слайда надо просвайпить чтобы перелистнуть
-//     useCSS: true,
-//     useTransform: true,
-//     variableWidth: false,//подстройка ширины
-//     vertical: false,
-//     verticalSwiping: false,
-//     waitForAnimate: true,//для дальнейшего пролистывания дождаться завершения анимации
-//     zIndex: 1000,
-//     responsive: [{
-//       breakpoint: 768,
-//       settings: {}
-//     }]
-//   });
+if ($('.slider__body').length > 0) {
+   $('.slider__body').slick({
+     autoplay: true,
+     infinite: true,//зацикливание
+     dots: true,//точки
+     dotsClass: 'slick-dots',
+     arrows: true,//стрелки
+     accessibility: false,
+     slidesToShow: 3,
+     slidesToScroll: 1,//сколько слайдов пролистывать за одно нажатие
+     autoplaySpeed: 3000,
+     adaptiveHeight: true,
+     centerMode: true,//выстраивает слайд по центру
+     centerPadding: '50px',
+     cssEase: 'ease',
+     customPaging:,
+     asNavFor: '.slider-big__body',//связать со слайдером с указанным классом
+     appendDots:
+     appendArrows: $('.mainslider-arrows .container'),
+     nextArrow: '<button type="button" class="slick-next"></button>',
+     prevArrow: '<button type="button" class="slick-prev"></button>',
+     draggable: true,//листать мышкой
+     fade: false,
+     focusOnSelect: false,
+     easing: 'linear',//тип анимации
+     edgeFriction: 0.15,
+     initialSlide: 0,
+     lazyLoad: 'ondemand',//event, slick, image, imageSource
+     mobileFirst: false,
+     pauseOnFocus: true,
+     pauseOnHover: true,
+     pauseOnDotsHover: false,
+     respondTo: 'window',
+     rows: 1,
+     slide: '',
+     slidesPerRow: 1,
+     swipe: true,//листать на мобильном
+     swipeToSlide: false,
+     touchMove: true,//включает возможности тачскрина
+     touchThreshold: 10,//какую часть слайда надо просвайпить чтобы перелистнуть
+     useCSS: true,
+     useTransform: true,
+     variableWidth: false,//подстройка ширины
+     vertical: false,
+     verticalSwiping: false,
+     waitForAnimate: true,//для дальнейшего пролистывания дождаться завершения анимации
+     zIndex: 1000,
+     responsive: [{
+       breakpoint: 768,
+       settings: {}
+     }]
+   });
+//=================================================================================
+$('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});

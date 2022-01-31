@@ -14,10 +14,29 @@ $(document).ready(function () {
   });
 });
 //====================================================================================
-
+var mixer = mixitup('.products__row');
 
 
 //==================================================================================
 //для кнопки вверх страницы
 $().UItoTop({ easingType: 'easeOutQuart' });
 //==================================================================================
+if ($('.slider__inner').length > 0) {
+  $('.slider__inner').slick({
+    infinite: true,//зацикливание
+    dots: true,
+    arrows: false,
+    accessibility: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,//сколько слайдов пролистывать за одно нажатие
+    autoplaySpeed: 3000,
+    adaptiveHeight: true,
+    touchThreshold: 15,//какую часть слайда надо просвайпить чтобы перелистнуть
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+
+      }
+    }]
+  });
+}

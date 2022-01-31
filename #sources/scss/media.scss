@@ -7,7 +7,11 @@
 @media only screen and (max-width : 992.98px) {}
 
 // Small Devices, Tablets sm..3..3
-@media only screen and (max-width : 767.98px) {}
+@media only screen and (max-width : 767.98px) {
+  .container-fluid {
+    padding: 0px 15px;
+  }
+}
 
 // Extra Small Devices, Phones 
 @media only screen and (max-width : 479.98px) {}
