@@ -10,11 +10,11 @@ $bgcolor:#263238; //цвет футера и меню
 //=============================================================================================
 //<ОБОЛОЧКА>===========================================================================================================
 .wrapper {
-  width            : 100%;
-  min-height       : 100vh;
-  overflow         : hidden;
-  // display: flex;
-  // flex-direction: column;
+  width         : 100%;
+  min-height    : 100vh;
+  overflow      : hidden;
+  display       : flex;
+  flex-direction: column;
 
   &.loaded {}
 }
@@ -51,6 +51,110 @@ $bgcolor:#263238; //цвет футера и меню
   flex: 1 1 auto;
 }
 
+.popup {
+  width           : 730px;
+  height          : 483px;
+  display         : none;
+  background-color: #8BC34A;
+
+  &__title {
+    padding-top   : 70px;
+    padding-bottom: 40px;
+    font-size     : 48px;
+    font-family   : "Roboto";
+    color         : rgb(255, 255, 255);
+    font-weight   : bold;
+    text-transform: uppercase;
+    line-height   : 36px;
+    text-align    : center;
+  }
+
+  &__body {
+    margin   : 0px auto;
+    max-width: 400px;
+  }
+
+  ::placeholder {
+    color: #fff;
+  }
+
+  &__label {
+    position: relative;
+
+    &::before {
+      position   : absolute;
+      font-family: 'icomoon';
+      font-size  : 14px;
+      color      : #fff;
+      top        : 15px;
+      left       : 18px;
+      height     : 16px;
+      width      : 16px;
+      z-index    : 5;
+    }
+  }
+
+  .submit {
+    margin-top      : 10px;
+    padding         : 15px 45px;
+    background-color: #fff;
+    text-transform  : uppercase;
+    font-size       : 14px;
+    font-weight     : 600;
+    margin-right    : 10px;
+    box-shadow      : 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+  }
+
+
+  &__label-name::before {
+    content: "\f2c0";
+  }
+
+  &__label-password::before {
+    content: "\f023";
+  }
+
+  input {
+    display            : block;
+    font-size          : 14px;
+    height             : 45px;
+    // max-width       : 400px;
+    width              : 100%;
+    margin-bottom      : 10px;
+    padding-left       : 45px;
+    background-color   : #76AE36;
+    color              : #fff;
+  }
+}
+
+.create {
+  margin-top      : 10px;
+  display         : inline-block;
+  padding         : 12px 35px 15px 22px;
+  background-color: #76AE36;
+  color           : #fff;
+  font-size       : 18px;
+
+  &::before {
+    font-family : 'icomoon';
+    content     : "\f023";
+    margin-right: 18px;
+  }
+}
+
+.lost {
+  display   : block;
+  margin-top: 20px;
+  font-size : 18px;
+  color     : #fff;
+}
+
+.fancybox-button svg path {
+  fill        : #fff;
+  stroke-width: 5px;
+}
+
+
 //====================================================================================================
 //section header
 //====================================================================================================
@@ -60,6 +164,10 @@ $bgcolor:#263238; //цвет футера и меню
 
   &__top {
     background-color: #fff;
+  }
+
+  &__logo {
+    padding-right: 10px;
   }
 
   &__inner {
@@ -107,7 +215,7 @@ $bgcolor:#263238; //цвет футера и меню
   }
 
   &__box {
-    min-width      : 400px;
+    min-width      : 160px;
     height         : 45px;
     display        : flex;
     justify-content: flex-end;
@@ -153,6 +261,8 @@ $bgcolor:#263238; //цвет футера и меню
   }
 
 }
+
+
 
 .header__btn-ligin--on {
   display: none;
@@ -476,7 +586,7 @@ $bgcolor:#263238; //цвет футера и меню
   }
 
   &__menu {
-    @include anim(0.5s, 0s);
+    @include anim(0.3s, 0s);
     visibility      : hidden;
     position        : absolute;
     top             : 62px;
@@ -584,12 +694,6 @@ $bgcolor:#263238; //цвет футера и меню
   }
 }
 
-/////////////////////////////////
-.message {}
-
-.basket {}
-
-.user {}
 
 .menu {
 
@@ -611,6 +715,10 @@ $bgcolor:#263238; //цвет футера и меню
     font-size  : 1.4rem;
     color      : #fff;
     line-height: 30px;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }
 

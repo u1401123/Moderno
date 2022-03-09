@@ -3,6 +3,13 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .item-1 {
   width: 100px;
@@ -995,11 +1002,11 @@ template {
   outline: none;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 767.98px) {
   .icon-menu {
     display: block;
     position: absolute;
-    top: 25px;
+    top: 38px;
     right: 20px;
     width: 30px;
     height: 18px;
@@ -1024,7 +1031,7 @@ template {
     bottom: 0px;
   }
   .icon-menu.active span {
-    background-color: #000;
+    background-color: #fff;
     -webkit-transform: scale(0);
     transform: scale(0);
   }
@@ -1055,8 +1062,115 @@ template {
           flex: 1 1 auto;
 }
 
+.popup {
+  width: 730px;
+  height: 483px;
+  display: none;
+  background-color: #8BC34A;
+}
+.popup__title {
+  padding-top: 70px;
+  padding-bottom: 40px;
+  font-size: 48px;
+  font-family: "Roboto";
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 36px;
+  text-align: center;
+}
+.popup__body {
+  margin: 0px auto;
+  max-width: 400px;
+}
+.popup ::-webkit-input-placeholder {
+  color: #fff;
+}
+.popup ::-moz-placeholder {
+  color: #fff;
+}
+.popup :-ms-input-placeholder {
+  color: #fff;
+}
+.popup ::-ms-input-placeholder {
+  color: #fff;
+}
+.popup ::placeholder {
+  color: #fff;
+}
+.popup__label {
+  position: relative;
+}
+.popup__label::before {
+  position: absolute;
+  font-family: "icomoon";
+  font-size: 14px;
+  color: #fff;
+  top: 15px;
+  left: 18px;
+  height: 16px;
+  width: 16px;
+  z-index: 5;
+}
+.popup .submit {
+  margin-top: 10px;
+  padding: 15px 45px;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+  -webkit-box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+          box-shadow: 0px 2px 2px 0px rgba(118, 174, 54, 0.75);
+}
+.popup__label-name::before {
+  content: "";
+}
+.popup__label-password::before {
+  content: "";
+}
+.popup input {
+  display: block;
+  font-size: 14px;
+  height: 45px;
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 45px;
+  background-color: #76AE36;
+  color: #fff;
+}
+
+.create {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 12px 35px 15px 22px;
+  background-color: #76AE36;
+  color: #fff;
+  font-size: 18px;
+}
+.create::before {
+  font-family: "icomoon";
+  content: "";
+  margin-right: 18px;
+}
+
+.lost {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.fancybox-button svg path {
+  fill: #fff;
+  stroke-width: 5px;
+}
+
 .header__top {
   background-color: #fff;
+}
+.header__logo {
+  padding-right: 10px;
 }
 .header__inner {
   display: -webkit-box;
@@ -1100,7 +1214,7 @@ template {
   background-color: #263238;
 }
 .header__box {
-  min-width: 400px;
+  min-width: 160px;
   height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1426,8 +1540,8 @@ template {
   visibility: visible;
 }
 .basket__menu {
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   visibility: hidden;
   position: absolute;
   top: 62px;
@@ -1542,6 +1656,9 @@ template {
   font-size: 1.4rem;
   color: #fff;
   line-height: 30px;
+}
+.menu__link:hover {
+  opacity: 0.5;
 }
 
 .search {
@@ -2216,9 +2333,142 @@ template {
 }
 
 /*==========  Desktop First Method  ==========*/
+@media only screen and (max-width: 1000px) {
+  .header__text {
+    display: none;
+  }
+
+  .footer {
+    padding: 40px 0px 0px 0px;
+  }
+  .footer__row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0px 0px 40px 0px;
+  }
+  .footer__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+}
 @media only screen and (max-width: 767.98px) {
   .container-fluid {
     padding: 0px 15px;
+  }
+
+  .header__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .header__logo {
+    margin-right: auto;
+  }
+
+  .header__box {
+    margin-right: 60px;
+  }
+
+  .message__box,
+.basket__box,
+.notification__box {
+    display: none;
+  }
+}
+.menu__list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #263238;
+  z-index: 90;
+  overflow: auto;
+  -webkit-transform: translate3d(0px, -100%, 0px);
+          transform: translate3d(0px, -100%, 0px);
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+.menu__list.active {
+  -webkit-transform: translate3d(0px, 0px, 0px);
+          transform: translate3d(0px, 0px, 0px);
+}
+.menu li + li {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.notification__menu,
+.message__menu,
+.basket__menu {
+  top: 62px;
+  left: -10px;
+}
+
+@media only screen and (max-width: 570px) {
+  .footer__column {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+  }
+  .footer__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 20px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .header__logo {
+    display: none;
+  }
+
+  .header__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .header__box {
+    margin-right: 40px;
+  }
+}
+@media only screen and (max-width: 479.98px) {
+  .notification__box,
+.basket__box,
+.message__box {
+    display: none;
+  }
+
+  .header__box {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .create {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .header__logo {
+    display: none;
+  }
+  .header__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*==========  Mobile First Method  ==========*/

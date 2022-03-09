@@ -7,6 +7,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/icomoon.css">
   <link rel="stylesheet" href="css/css-sprites.css">
   <link rel="stylesheet" href="css/style.css">
@@ -17,6 +18,22 @@
   <!-- @import "html/partials/preloader.html" -->
   <!-- todo:общая оболочка, чтобы не появлялся горизонтальный скролл -->
   <div class="wrapper">
+    <div class="popup" id="popup">
+      <h2 class="popup__title">Login</h2>
+      <div class="popup__body">
+        <form>
+          <label class="popup__label popup__label-name" for="">
+            <input type="text" placeholder="Name" required>
+          </label>
+          <label class="popup__label popup__label-password" for="">
+            <input type="text" placeholder="Password" required>
+          </label>
+          <button class="submit">submit</button>
+          <a class="create" href="#">Create An Account?</a>
+          <a class="lost" href="#">Lost Password?</a>
+        </form>
+      </div>
+    </div>
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -35,7 +52,7 @@
             </div>
             <div class="header__box">
               <div class="notification__box">
-                <a class="notification header__circle active icon-bell-o" href="#">
+                <a class="notification header__circle active1 icon-bell-o" href="#">
                   <span>8</span>
                 </a>
                 <div class="notification__menu">
@@ -72,7 +89,7 @@
                 </div>
               </div>
               <div class="message__box">
-                <a class="message header__circle active icon-envelope-o" href="#">
+                <a class="message header__circle active1 icon-envelope-o" href="#">
                   <span>5</span>
                 </a>
                 <div class="message__menu">
@@ -112,7 +129,7 @@
                 </div>
               </div>
               <div class="basket__box">
-                <a class="basket header__circle active icon-shopping-cart" href="#">
+                <a class="basket header__circle active1 icon-shopping-cart" href="#">
                   <span>855</span>
                 </a>
                 <div class="basket__menu">
@@ -146,8 +163,8 @@
                   </div>
                 </div>
               </div>
-              <div class="user__box">
-                <a class="user active" href="#">
+              <div class="user__box ">
+                <a class="user active1" href="#">
                   <div class="user__inner">
                     <div class="user__image">
                       <img src="img/moderno/чел 2.png" alt="">
@@ -172,9 +189,10 @@
                   </ul>
                 </nav>
               </div>
-              <a class="header__btn header__btn_green header__btn-ligin--on" href="#">Login</a>
-              <a class="header__btn header__btn_red header__btn-ligin--on" href="#">Register</a>
-              <a class="header__btn header__btn-logout header__btn-ligin--on" href="#">Logout</a>
+              <a data-fancybox href="#popup" class="header__btn header__btn_green header__btn-ligin--on1">Login</a>
+              <a class="header__btn header__btn_red header__btn-ligin--on1" href="#">Register</a>
+              <a class="header__btn header__btn-logout header__btn-ligin--on1" href="#">Logout</a>
+              <!-- header__btn-ligin--on -->
             </div>
           </div>
         </div>

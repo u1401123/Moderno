@@ -220,15 +220,16 @@
 // меню бургер
 //================================================================================
 .icon-menu {
-  @media (max-width: 550px) {
-    display : block;
-    position: absolute;
-    top     : 25px;
-    right   : 20px;
-    width   : 30px;
-    height  : 18px;
-    cursor  : pointer;
-    z-index : 100;
+  @media (max-width: 767.98px) {
+    display       : block;
+    position      : absolute;
+    top           : 38px;
+    right         : 20px;
+    // left       : 20px;
+    width         : 30px;
+    height        : 18px;
+    cursor        : pointer;
+    z-index       : 100;
 
     span {
       @include anim(0.3s, 0s);
@@ -250,8 +251,10 @@
     }
 
     &.active {
+
+
       span {
-        background-color: #000;
+        background-color: #fff;
         @include scale(0);
 
         &:first-child {

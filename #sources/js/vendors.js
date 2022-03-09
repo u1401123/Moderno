@@ -7,6 +7,7 @@
 //@prepros-append libs/easing.js
 //@prepros-append libs/mixitup.min.js
 //@prepros-append libs/slick.min.js
+//@prepros-append libs/jquery.fancybox.min.js
 
 
 // ======================================================================================================== 
