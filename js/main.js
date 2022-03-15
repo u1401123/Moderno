@@ -155,6 +155,19 @@ $('body').on('click', '.tab__navitem', function (event) {
   }
 });
 
+$('body').on('click', '.tab__navitem1', function (event) {
+  var eq = $(this).index();
+  if ($(this).hasClass('parent')) {
+    var eq = $(this).parent().index();
+  }
+  if (!$(this).hasClass('active')) {
+    $(this).closest('.tabs').find('.tab__navitem1',).removeClass('active');
+    $(this).addClass('active');
+    $(this).closest('.tabs').find('.tab__item1').removeClass('active').eq(eq).addClass('active');
+  }
+});
+
+
 //===========================================================================
 var mixer = mixitup('.products__row');
 }($));

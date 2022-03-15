@@ -31,15 +31,22 @@
 }
 
 .content {
+  &__form-column {
+    max-width: 728px;
+    width    : 100%;
+  }
 
   &__row {
     padding-top    : 30px;
     display        : flex;
     justify-content: space-between;
 
+
   }
 
-  &__info {}
+  &__info-column {
+    margin-right: 10px;
+  }
 
   &__info-title {
     font-size     : 20px;
@@ -87,10 +94,6 @@
     }
   }
 
-
-
-  &__form {}
-
   &__form-title {
     margin-bottom: 25px;
     font-size    : 24px;
@@ -122,24 +125,32 @@
   }
 }
 
-.form {
-
-  &__column {}
+.name1 {
+  margin-right: 10px;
 }
 
-.form-group {}
-
-.a-form-group {}
+.name1,
+.email {
+  max-width: 352px;
+  width    : 50%;
+}
 
 .form-control {
   font-size: 15px;
-  width    : 352px;
   color    : #7a7a7a;
 }
 
+textarea {
+  height: 192px;
+}
+
+
 input[type="email"],
 input[type="text"],
+select,
 textarea {
+  font-size       : 15px;
+  width           : 100%;
   padding-left    : 15px;
   padding-right   : 10px;
   padding-top     : 14px;
@@ -153,9 +164,7 @@ textarea {
   margin-bottom: 23px;
 }
 
-.submit {}
-
-.btnsend {
+input[type=submit] {
   display         : block;
   text-transform  : uppercase;
   font-size       : 16px;
@@ -164,4 +173,32 @@ textarea {
   text-align      : center;
   padding         : 19px 35px 15px 35px;
   color           : #fff;
+}
+
+@media screen and (max-width: 767.98px) {
+  .content {
+    &__form-row {
+      flex-wrap      : wrap;
+      justify-content: space-between;
+      margin-bottom  : 28px;
+    }
+  }
+
+  .name1 {
+    margin-bottom: 10px;
+    margin-right : 0;
+  }
+
+  .name1,
+  .email {
+    max-width: 100%;
+    width    : 100%;
+  }
+
+  .contact {
+    &__map {
+      min-height: auto;
+    }
+  }
+
 }
