@@ -40,6 +40,9 @@ $bgcolor:#263238; //цвет футера и меню
 // @import "partials/slider_slick.scss";
 // @import "partials/spollers.scss";
 @import "partials/ibg.scss";
+@import "product_details.scss";
+@import "contacts.scss";
+@import "settings.scss";
 
 
 // @import "baguetteBox.scss"; //Для просмотра картинки при нажатии на нее sliders.scss
@@ -51,6 +54,9 @@ $bgcolor:#263238; //цвет футера и меню
   flex: 1 1 auto;
 }
 
+//================================================================================
+// popup
+//================================================================================
 .popup {
   width           : 730px;
   height          : 483px;
@@ -130,14 +136,14 @@ $bgcolor:#263238; //цвет футера и меню
 .create {
   margin-top      : 10px;
   display         : inline-block;
-  padding         : 12px 35px 15px 22px;
+  padding         : 12px 30px 15px 20px;
   background-color: #76AE36;
   color           : #fff;
   font-size       : 18px;
 
   &::before {
     font-family : 'icomoon';
-    content     : "\f023";
+    content     : "\f044";
     margin-right: 18px;
   }
 }
@@ -212,6 +218,7 @@ $bgcolor:#263238; //цвет футера и меню
 
   &__bottom {
     background-color: $bgcolor;
+    min-height      : 60px;
   }
 
   &__box {
@@ -706,7 +713,7 @@ $bgcolor:#263238; //цвет футера и меню
       display: inline-block;
 
       &+li {
-        margin-left: 30px;
+        margin-left: 42px;
       }
     }
   }
@@ -752,7 +759,7 @@ $bgcolor:#263238; //цвет футера и меню
     line-height  : 30px;
     text-align   : center;
     font-weight  : 500;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
   }
 
   &__form {

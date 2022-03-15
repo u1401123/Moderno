@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.woff?3jk4p0') format('woff');
+  src:  url('../fonts/icomoon.woff?sw3rjc') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -45,12 +45,6 @@
 .icon-map-marker:before {
   content: "\f041";
 }
-.icon-mail-forward:before {
-  content: "\f064";
-}
-.icon-share:before {
-  content: "\f064";
-}
 .icon-gift:before {
   content: "\f06b";
 }
@@ -78,9 +72,6 @@
 .icon-linkedin:before {
   content: "\f0e1";
 }
-.icon-comment-o:before {
-  content: "\f0e5";
-}
 .icon-bolt:before {
   content: "\f0e7";
 }
@@ -99,32 +90,11 @@
 .icon-angle-down:before {
   content: "\f107";
 }
-.icon-mail-reply:before {
-  content: "\f112";
-}
-.icon-reply:before {
-  content: "\f112";
-}
 .icon-location-arrow:before {
   content: "\f124";
 }
 .icon-youtube-play:before {
   content: "\f16a";
-}
-.icon-sun-o:before {
-  content: "\f185";
-}
-.icon-moon-o:before {
-  content: "\f186";
-}
-.icon-graduation-cap:before {
-  content: "\f19d";
-}
-.icon-mortar-board:before {
-  content: "\f19d";
-}
-.icon-trash:before {
-  content: "\f1f8";
 }
 .icon-user-o:before {
   content: "\f2c0";
